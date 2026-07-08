@@ -103,7 +103,7 @@ const Header = () => {
               </div>
             )}
           </div>
-          <Link to="/contact#quote" className="btn btn-primary">Request a Quote</Link>
+          <Link to="/contact#quote" className="btn btn-primary"><span className="quote-text-full">Request a </span>Quote</Link>
         </div>
       </div>
     </header>

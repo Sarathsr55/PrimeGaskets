@@ -257,4 +257,8 @@
   .header-actions {
     margin-left: auto;
   }
+
+  .quote-text-full {
+    display: none;
+  }
 }

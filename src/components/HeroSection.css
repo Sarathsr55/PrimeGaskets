@@ -52,6 +52,7 @@
   background-attachment: inherit;
   background-size: inherit;
   background-position: inherit;
+  /* background-color: rgba(255, 255, 255, 0.958); */
   filter: blur(15px) brightness(0.9);
   z-index: -1;
 }
@@ -101,9 +102,15 @@
   }
 }
 
+
 @media (max-width: 768px) {
+  .hero {
+    align-items: flex-end;
+    padding-bottom: 10%;
+  }
+
   .hero-content {
-    margin-top: 2rem;
+    margin-top: 0;
     padding: 2rem;
     max-width: 100%;
   }
