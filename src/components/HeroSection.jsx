@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
       <div className="container">
-        <div className="hero-content">
+        <div className="hero-content" style={{ backgroundImage: `url(${heroBg})` }}>
           <span className="subtitle">ENGINEERING EXCELLENCE</span>
           <h1>Precision Engineering for High-Performance Sealing</h1>
           <p>Manufacturing and supply of high-quality automotive & offshore gaskets to industries around the world. </p>
