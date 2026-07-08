@@ -3,8 +3,7 @@
   min-height: 600px;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  /* Parallax effect */
+  /* Removed background-attachment: fixed; because it breaks backdrop-filter in many browsers */
   display: flex;
   align-items: center;
   position: relative;
