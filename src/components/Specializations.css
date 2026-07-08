@@ -1,0 +1,155 @@
+.section-padding {
+  padding: 2rem 2rem;
+}
+
+.section-header {
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  color: var(--text-muted);
+}
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.spec-card {
+  position: relative;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  overflow: hidden;
+}
+
+.spec-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.spec-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  width: 100%;
+}
+
+.spec-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.text-orange {
+  color: var(--secondary);
+}
+
+.spec-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.spec-card p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  max-width: 80%;
+}
+
+.bespoke-card {
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+}
+
+.bespoke-card::before {
+  display: none;
+}
+
+.bespoke-content {
+  width: 100%;
+}
+
+.bespoke-content h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bespoke-stats {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.stat span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat strong {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2px;
+}
+
+.arrow-link:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .spec-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bespoke-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .bespoke-card {
+    padding: 2rem;
+  }
+
+  .section-padding {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.show-more-card::before {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.show-more-card:hover::before {
+  background: rgba(0, 0, 0, 0.7);
+}

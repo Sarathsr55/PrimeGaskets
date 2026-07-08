@@ -1,0 +1,260 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.header-scrolled {
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Default (transparent) state text colors */
+.logo strong {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
+.main-nav a:hover {
+  color: #fff;
+}
+
+.main-nav a.active {
+  color: #fff;
+  border-bottom-color: var(--secondary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar svg {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: #fff;
+  width: 150px;
+  transition: color 0.3s ease;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Scrolled state text colors */
+.header-scrolled .logo strong {
+  color: var(--text-main);
+}
+
+.header-scrolled .main-nav a {
+  color: var(--text-muted);
+}
+
+.header-scrolled .main-nav a:hover,
+.header-scrolled .main-nav a.active {
+  color: var(--text-main);
+}
+
+.header-scrolled .search-bar {
+  background-color: var(--bg-light);
+}
+
+.header-scrolled .search-bar svg {
+  color: var(--text-muted);
+}
+
+.header-scrolled .search-bar input {
+  color: var(--text-main);
+}
+
+.header-scrolled .search-bar input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Dark text state for pages with light backgrounds at the top (like Products) */
+.header-dark-text .logo strong {
+  color: var(--text-main);
+}
+
+.header-dark-text .main-nav a {
+  color: var(--text-muted);
+}
+
+.header-dark-text .main-nav a:hover,
+.header-dark-text .main-nav a.active {
+  color: var(--text-main);
+}
+
+.header-dark-text .search-bar {
+  background-color: #e5e7eb;
+}
+
+.header-dark-text .search-bar svg {
+  color: var(--text-muted);
+}
+
+.header-dark-text .search-bar input {
+  color: var(--text-main);
+}
+
+.header-dark-text .search-bar input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Search Dropdown Styles */
+.search-container {
+  position: relative;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 0.5rem;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 200;
+  min-width: 250px;
+}
+
+.search-dropdown ul {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: auto;
+  gap: 0;
+}
+
+.search-dropdown li {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  gap: 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+.search-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.search-dropdown li:hover {
+  background-color: var(--bg-light);
+}
+
+.search-dropdown img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.search-res-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.res-name {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.res-tag {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.no-results {
+  padding: 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .search-bar input {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .main-nav {
+    width: 100%;
+    margin-top: 1rem;
+    order: 3;
+  }
+
+  .main-nav ul {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+}
