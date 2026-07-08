@@ -34,8 +34,10 @@
   /* Semi-transparent white */
   backdrop-filter: blur(8px);
   /* Glassmorphism blur effect */
-  -webkit-backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(8px);
   /* Safari support */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   padding: 3rem;
   max-width: 600px;
   border-radius: 8px;
